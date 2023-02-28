@@ -1,0 +1,6 @@
+case
+	when "fid"=5 then '00+50'
+	when "fid"<=95 THEN concat('0'||(left("fid",1)||('+')||right("fid",1))||'0')
+	when "fid">=995 THEN concat(left("fid",3)||'+'||right("fid",1)||'0')
+	when ("fid")>95 THEN concat(left("fid",2))||'+'||right("fid",1)||'0'
+end
